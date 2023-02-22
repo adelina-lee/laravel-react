@@ -6,8 +6,8 @@ import Article from '../../../modules/article/Article'
 import Articles from './components/Articles'
 
 const mapStateToProps = state => {
-  const {data, ...meta} = state.articles
-  
+  const { data, ...meta } = state.articles
+
   return {
     articles: data?.map((article) => new Article(article)),
     meta: Object.assign({}, meta)

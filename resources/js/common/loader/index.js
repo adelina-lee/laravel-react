@@ -10,7 +10,7 @@ const propTypes = {
   error: PropTypes.object,
 }
 
-const LoadingComponent = ({isLoading, error}) => {
+const LoadingComponent = ({ isLoading, error }) => {
   // Handle the loading state
   if (isLoading) {
     return <div>Loading...</div>
@@ -19,7 +19,7 @@ const LoadingComponent = ({isLoading, error}) => {
   else if (error) {
 
     // This resolves an issue that newly named code-splitted js files make
-    if(error['name'] && error['name'] == "ChunkLoadError"){
+    if (error['name'] && error['name'] == "ChunkLoadError") {
       window.location.reload();
     }
 
